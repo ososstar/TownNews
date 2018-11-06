@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#d32f2f</color>
+    <color name="colorPrimaryDark">#b71c1c</color>
+    <color name="colorAccent">#03A9F4</color>
+
+
+    <!-- Sport News Background color -->
+    <color name="Sport">#04B4B3</color>
+
+    <!-- Arts News Background color -->
+    <color name="Arts">#10CAC9</color>
+
+    <!-- Economy News Background color -->
+    <color name="Economy">#F5A623</color>
+
+    <!-- News Background color -->
+    <color name="News">#D93218</color>
+
+    <!-- Magnitude circle color for an earthquake with magnitude between 6 and 7 -->
+    <color name="magnitude6">#FC6644</color>
+    <!-- Color for an earthquake with magnitude 0 and 2 -->
+    <color name="magnitude1">#4A7BA7</color>
+    <!-- Magnitude circle color for an earthquake with magnitude over 10 -->
+    <color name="generalNews">#C03823</color>
+
+</resources>
