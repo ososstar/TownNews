@@ -40,7 +40,7 @@ public class TownNewsActivity extends AppCompatActivity implements LoaderManager
      * URL for the news data from the Guardian dataset
      */
     private static final String GuardianNews =
-            "https://content.guardianapis.com/search?api-key=a1aa3168-c703-45fe-ace5-5092115e3950";
+            "https://content.guardianapis.com/search";
 
     /**
      * Adapter for the list of earthquakes
@@ -137,6 +137,8 @@ public class TownNewsActivity extends AppCompatActivity implements LoaderManager
         Uri.Builder uriBuilder = baseUri.buildUpon();
 
         // Append query parameter and its value. For example, the `page-size=10`
+        uriBuilder.appendQueryParameter("api-key", "a1aa3168-c703-45fe-ace5-5092115e3950");
+        uriBuilder.appendQueryParameter("show-tags", "contributor");
         uriBuilder.appendQueryParameter("q", search);
         uriBuilder.appendQueryParameter("order-by", orderBy);
         uriBuilder.appendQueryParameter("page-size", pageSize);

@@ -18,18 +18,25 @@ public class News {
     private String mDate;
 
     /**
-     * The url of the News
+     * The URL of the News
      */
-    private String mUrl;
+    private String mURL;
+
+    /**
+     * The Author of the News
+     */
+    private String mAuthor;
+
 
     /**
      * Create a new News Object
      */
-    public News(String Title, String Section, String Date, String url) {
+    public News(String Title, String Section, String Date, String URL, String Author) {
         mTitle = Title;
         mSection = Section;
         mDate = Date;
-        mUrl = url;
+        mURL = URL;
+        mAuthor = Author;
     }
 
     /**
@@ -57,7 +64,14 @@ public class News {
      * get the url of the News
      */
     public String getUrl() {
-        return mUrl;
+        return mURL;
+    }
+
+    /**
+     * get the Author of the News
+     */
+    public String getAuthor() {
+        return mAuthor;
     }
 
 }

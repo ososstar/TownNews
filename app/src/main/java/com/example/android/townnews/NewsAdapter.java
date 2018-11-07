@@ -13,6 +13,8 @@ import java.util.ArrayList;
 
 public class NewsAdapter extends ArrayAdapter<News> {
     private static final String DATE_SEPARATOR = "T";
+    private static final String TIME_SEPARATOR = ":";
+
 
     /**
      * Create a new {@link NewsAdapter} object.
@@ -53,7 +55,7 @@ public class NewsAdapter extends ArrayAdapter<News> {
             date = parts[0];
             time = parts[1];
 
-            String[] divide = time.split(":");
+            String[] divide = time.split(TIME_SEPARATOR);
             dTime = divide[0] + ":" + divide[1];
         } else {
             date = originalDate;
@@ -65,6 +67,15 @@ public class NewsAdapter extends ArrayAdapter<News> {
         TextView timeToDisplay = convertView.findViewById(R.id.time);
         timeToDisplay.setText(dTime);
 
+        String byAuthor = "by ";
+        // setup the author name
+        String authorName = currentNews.getAuthor();
+        TextView author = convertView.findViewById(R.id.author);
+        StringBuilder byAuthorName = new StringBuilder();
+        byAuthorName.append(byAuthor).append(authorName);
+        if (!authorName.isEmpty()) {
+            author.setText(byAuthorName);
+        }
         return convertView;
     }
 }
